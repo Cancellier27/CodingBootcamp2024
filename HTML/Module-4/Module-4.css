@@ -239,3 +239,106 @@ footer {
 .footer-social a:hover {
   color: #2b6289;
 }
+
+/* Gallery page ---------------- */
+
+#main-gallery-container {
+  margin-top: 50px;
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 75vw;
+  margin: 20px auto;
+}
+
+#gallery img {
+  padding: 0;
+  border: 3px solid #fff;
+  box-shadow: 0px 0px 3px #ccc;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+figure {
+  margin: 10px;
+  padding: 0;
+  position: relative;
+}
+
+figure img {
+  width: 100%;
+}
+
+figcaption {
+  background-color: rgb(255, 255, 255, 0.5);
+  width: 100%;
+  text-align: center;
+  color: #5e423f;
+  z-index: 1;
+  padding: 9px 0px 11px 0px;
+  text-transform: uppercase;
+  font-size: 15px;
+  position: absolute;
+  bottom: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  figcaption {
+    font-size: 3vw;
+  }
+  #gallery {
+    grid-template-columns: 1fr;
+    width: 99vw;
+  }
+}
+
+.contact {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  margin: 80px auto;
+  max-width: 800px;
+  margin-bottom: 40vh;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.contact h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: #e6e6e6;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.contact form {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #e6e6e6;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #848484;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* table- ------------------ */
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
