@@ -2,21 +2,26 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
-    <meta name="description" content="Luxury Car Tours Page" />
+    <meta name="description" content="Yachting Tours Page" />
     <meta
       name="keywords"
-      content="Cars, Luxury, Automobile, racing, Forula1, Racing track"
+      content="Yachting, Yacht, water, sea, sailing, holiday"
     />
-    <meta name="author" content="Filipe Cancellier da Costa" />
+    <meta name="author" content="Filipe C Costa" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
     <script
       src="https://kit.fontawesome.com/1693a68714.js"
       crossorigin="anonymous"
     ></script>
 
-    <title>Luxury Sport Car Tours</title>
+    <title>Elegant Yachting Tours</title>
   </head>
+
   <body>
     <nav>
       <ul>
@@ -27,29 +32,24 @@
       </ul>
     </nav>
 
-    <div class="container">
-      <div class="header-content">
-        <h1>Luxury Sport Car Tours</h1>
-        <h2>An experience that will sail your dreams into reality!</h2>
-      </div>
-      <div class="button-container">
-        <button class="shrink-border" onclick="changeCar()">
-          Start Your Tour
-        </button>
+    <div id="main-gallery-container">
+      <h2>The Elegant Yachting Gallery</h2>
+      
+      <div id="gallery">
+        <figure>
+          <img
+            src="images/gallery1.jpg"
+            alt="A White boat in the middle of the sea"
+            title="White boat by Hailey"
+            />
+            <figcaption>A White boat in the middle of the sea</figcaption>
+        </figure>
+
+        
+
+        </figure>
       </div>
     </div>
-
-    <section class="chapter-section">
-      <h2>Drive as a real car pilot</h2>
-
-      <p>
-        Set sail with us as we explore untouched islands, crystal clear waters,
-        and breathtaking sunsets. Every tour is a curated experience, ensuring
-        you witness the beauty and tranquility of the sea. Join us on a voyage
-        of discovery and indulge in the luxury that only Elegant Yachting Tours
-        can offer.
-      </p>
-    </section>
 
     <footer>
       <div class="footer-content">
@@ -68,13 +68,6 @@
           <a href="#twitter"><i class="fa-brands fa-x-twitter"></i></a>
         </p>
       </div>
-
-      <script>
-        function changeCar() {
-          let container = document.querySelector(".container")
-          container.style.backgroundImage = "url('images/FordGT.jpg')"
-        }
-      </script>
     </footer>
   </body>
 </html>

@@ -24,7 +24,7 @@ h2 {
 }
 
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -64,20 +64,34 @@ nav a:hover {
 }
 
 .container {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 89vh;
+  height: 100vh;
   width: auto;
   text-align: center;
   padding: 2rem;
   padding-top: 60;
-  background-image: url("../Yacht.jpg");
+  background-image: url("images/Ferrari.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  animation: animateCarImages infinite 240s;
   position: relative;
 }
+
+@keyframes animateCarImages {
+  00%, 11% { background-image: url(images/Ferrari.jpg); }
+  12%, 24% { background-image: url(images/Audi.jpg); }
+  25%, 36% { background-image: url(images/Bugatti_Veyron.jpg); }
+  37%, 49% { background-image: url(images/Corvette.jpg); }
+  50%, 61% { background-image: url(images/FordGT.jpg); }
+  62%, 74% { background-image: url(images/Lamborghini.jpg); }
+  75%, 86% { background-image: url(images/LotusEmira.jpg); }
+  87%, 99% { background-image: url(images/McLaren.jpg); }
+}
+
 
 .container::before {
   content: "";
@@ -89,6 +103,7 @@ nav a:hover {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
+
 
 .header-content,
 .button-container {
