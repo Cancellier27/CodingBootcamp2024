@@ -82,14 +82,15 @@ nav a:hover {
 }
 
 @keyframes animateCarImages {
-  00%, 11% { background-image: url(images/Ferrari.jpg); }
-  12%, 24% { background-image: url(images/Audi.jpg); }
-  25%, 36% { background-image: url(images/Bugatti_Veyron.jpg); }
-  37%, 49% { background-image: url(images/Corvette.jpg); }
-  50%, 61% { background-image: url(images/FordGT.jpg); }
-  62%, 74% { background-image: url(images/Lamborghini.jpg); }
-  75%, 86% { background-image: url(images/LotusEmira.jpg); }
-  87%, 99% { background-image: url(images/McLaren.jpg); }
+  00%, 10% { background-image: url(images/Ferrari.jpg); }
+  11%, 21% { background-image: url(images/Audi.jpg); }
+  22%, 32% { background-image: url(images/Bugatti_Veyron.jpg); }
+  33%, 43% { background-image: url(images/Corvette.jpg); }
+  44%, 54% { background-image: url(images/FordGT.jpg); }
+  55%, 65% { background-image: url(images/Lamborghini.jpg); }
+  66%, 76% { background-image: url(images/LotusEmira.jpg); }
+  77%, 88% { background-image: url(images/McLaren.jpg); }
+  89%, 99% { background-image: url(images/Mercedes.jpg); }
 }
 
 
@@ -109,6 +110,10 @@ nav a:hover {
 .button-container {
   position: relative;
   z-index: 1;
+}
+
+.button-container {
+  margin-top: 20px;
 }
 
 .shrink-border {
@@ -157,7 +162,8 @@ nav a:hover {
   transform: scaleX(1) scaleY(1);
 }
 
-button {
+.button-container a {
+  text-decoration: none;
   text-transform: uppercase;
   position: relative;
   border: none;
@@ -171,12 +177,12 @@ button {
   border: 3px solid transparent;
 }
 
-button:active {
+.button-container a:active {
   transform: translate(3px);
 }
 
-button::after,
-button::after {
+.button-container a::after,
+.button-container a::after {
   border-radius: 3px;
 }
 
@@ -248,4 +254,78 @@ footer {
 
 .footer-social a:hover {
   color: #2b6289;
+}
+
+/* Tours --------------------------- */
+
+#main-tours-container {
+  margin-top: 100px;
+}
+
+#main-tours-container h2 {
+  margin-bottom: 50px;
+  text-align: center;
+  padding-bottom: 5px;
+  text-shadow: 2px 5px 5px black;
+}
+
+#tours {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 75vw;
+  margin: 20px auto;
+}
+
+#tours img {
+  padding: 0;
+  border: 3px solid #fff;
+  box-shadow: 0px 0px 3px #ccc;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+figure {
+  margin: 10px;
+  padding: 0;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+figure:hover {
+  transform: scale(1.05);
+}
+
+figure:active {
+  transform: scale(1.02);
+}
+
+
+figure img {
+  width: 100%;
+}
+
+figcaption {
+  background-color: rgb(255, 255, 255, 0.5);
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  z-index: 1;
+  padding: 9px 0px 11px 0px;
+  text-transform: uppercase;
+  font-size: 15px;
+  position: absolute;
+  bottom: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  figcaption {
+    font-size: 3vw;
+  }
+  #tours {
+    grid-template-columns: 1fr;
+    width: 99vw;
+  }
 }
