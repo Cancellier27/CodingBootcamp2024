@@ -7,8 +7,9 @@ p {
   color: #e6e6e6;
 }
 
+/* to override bootstrap background color */
 body {
-  background-color: #32323c;
+  background-color: #32323c !important;
   margin: 0;
 }
 
@@ -59,8 +60,8 @@ nav a {
 
 nav a:hover {
   color: #1b1b20;
-  border-bottom: 3px solid #e6e6e6;
-  background-color: #a533518c;
+  border-bottom: 3px solid #fffffff3;
+  background-color: #5a5a5a8c;
 }
 
 .container {
@@ -328,4 +329,20 @@ figcaption {
     grid-template-columns: 1fr;
     width: 99vw;
   }
+}
+
+/* Tours-------------------------- */
+
+
+.form-section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.form-section form {
+  width: 50%;
 }
