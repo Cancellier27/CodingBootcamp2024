@@ -1,8 +1,5 @@
-* {
-  font-family: Montserrat, sans-serif;
-}
-
 p {
+  font-family: Montserrat, sans-serif;
   font-size: 20px;
   color: #e6e6e6;
 }
@@ -11,24 +8,37 @@ p {
 body {
   background-color: #32323c !important;
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  /* display: none !important; */
+  flex: 1;
 }
 
 h1 {
+  font-family: Montserrat, sans-serif;
   font-size: 2.5rem;
   color: #e6e6e6;
   margin-bottom: 10px;
 }
 
 h2 {
+  font-family: Montserrat, sans-serif;
   font-size: 1.4rem;
   color: #b0b0b8;
+  text-shadow: 2px 5px 5px black;
 }
 
 nav {
+  box-sizing: border-box;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 40px;
   padding: 10px 0;
   z-index: 10;
   background-color: rgba(50, 50, 60, 0.95);
@@ -46,6 +56,8 @@ nav ul {
 
 nav li {
   margin: 0 15px;
+  padding: 0;
+  height: 20px;
 }
 
 nav a {
@@ -83,17 +95,43 @@ nav a:hover {
 }
 
 @keyframes animateCarImages {
-  00%, 10% { background-image: url(images/Ferrari.jpg); }
-  11%, 21% { background-image: url(images/Audi.jpg); }
-  22%, 32% { background-image: url(images/Bugatti_Veyron.jpg); }
-  33%, 43% { background-image: url(images/Corvette.jpg); }
-  44%, 54% { background-image: url(images/FordGT.jpg); }
-  55%, 65% { background-image: url(images/Lamborghini.jpg); }
-  66%, 76% { background-image: url(images/LotusEmira.jpg); }
-  77%, 88% { background-image: url(images/McLaren.jpg); }
-  89%, 99% { background-image: url(images/Mercedes.jpg); }
+  00%,
+  10% {
+    background-image: url(images/Ferrari.jpg);
+  }
+  11%,
+  21% {
+    background-image: url(images/Audi.jpg);
+  }
+  22%,
+  32% {
+    background-image: url(images/Bugatti_Veyron.jpg);
+  }
+  33%,
+  43% {
+    background-image: url(images/Corvette.jpg);
+  }
+  44%,
+  54% {
+    background-image: url(images/FordGT.jpg);
+  }
+  55%,
+  65% {
+    background-image: url(images/Lamborghini.jpg);
+  }
+  66%,
+  76% {
+    background-image: url(images/LotusEmira.jpg);
+  }
+  77%,
+  88% {
+    background-image: url(images/McLaren.jpg);
+  }
+  89%,
+  99% {
+    background-image: url(images/Mercedes.jpg);
+  }
 }
-
 
 .container::before {
   content: "";
@@ -105,7 +143,6 @@ nav a:hover {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
-
 
 .header-content,
 .button-container {
@@ -198,7 +235,6 @@ nav a:hover {
 }
 
 .chapter-section h2 {
-  text-decoration: underline;
   color: #e6e6e6;
 }
 
@@ -210,9 +246,12 @@ nav a:hover {
 
 /* Footer ----------------------------- */
 footer {
+  box-sizing: border-box;
   background-color: #1b1b20;
   padding: 40px 0;
   color: #e6e6e6;
+  height: 210px;
+  font-family: Montserrat, sans-serif;
 }
 
 .footer-content {
@@ -221,12 +260,25 @@ footer {
   margin: 0 auto;
 }
 
+.footer-rights {
+  /* font-weight: 100; */
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
 .footer-links {
   list-style-type: none;
   padding: 0;
   display: flex;
   justify-content: center;
+  margin: 20px 0;
+  font-size: 16px;
   gap: 20px;
+}
+
+.footer-links li {
+ margin: 0;padding: 0;
 }
 
 .footer-links a {
@@ -260,14 +312,14 @@ footer {
 /* Tours --------------------------- */
 
 #main-tours-container {
-  margin-top: 100px;
+  margin-top: 80px;
+  margin-bottom: 50px;
 }
 
 #main-tours-container h2 {
   margin-bottom: 50px;
   text-align: center;
   padding-bottom: 5px;
-  text-shadow: 2px 5px 5px black;
 }
 
 #tours {
@@ -287,23 +339,22 @@ footer {
   z-index: -1;
 }
 
-figure {
+.image-card {
   margin: 10px;
   padding: 0;
   position: relative;
   transition: transform 0.2s;
 }
 
-figure:hover {
+.image-card:hover {
   transform: scale(1.05);
 }
 
-figure:active {
+.image-card:active {
   transform: scale(1.02);
 }
 
-
-figure img {
+.image-card img {
   width: 100%;
 }
 
@@ -331,8 +382,7 @@ figcaption {
   }
 }
 
-/* Tours-------------------------- */
-
+/* Contact-------------------------- */
 
 .form-section {
   margin-top: 100px;
@@ -340,9 +390,80 @@ figcaption {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .form-section form {
-  width: 50%;
+  width: 60%;
+}
+
+@media screen and (max-width: 600px) {
+  .form-section form {
+    width: 75%;
+  }
+
+  .form-section legend {
+    font-size: 18px;
+  }
+}
+
+/* About Us ------------------------- */
+.aboutUs-section {
+  margin: 80px 150px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutUs-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutUs-section p {
+  font-size: 21px;
+  line-height: auto;
+  box-sizing: border-box;
+  width: 70%;
+  padding-right: 100px;
+  border-right: 2px solid white;
+}
+
+.aboutUs-images-container {
+  width: 550px;
+  min-width: 450px;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.aboutUs-images {
+  margin: 0;
+  width: 100%;
+  height: 300px;
+  box-shadow: black 5px 5px 20px;
+  background-image: url("images/Ferrari.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  animation: animateCarImages infinite 240s;
+}
+
+@media screen and (max-width: 1300px) {
+  .aboutUs-images-container {
+    display: none;
+  }
+
+  .aboutUs-section p {
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .aboutUs-section {
+    margin: 100px 50px 80px;
+  }
 }
