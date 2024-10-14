@@ -1,5 +1,6 @@
-/* to override bootstrap background color */
+/* General CSS */
 body {
+  /* to override bootstrap background color */
   background-color: #32323c !important;
   margin: 0;
   min-height: 100vh;
@@ -8,7 +9,6 @@ body {
 }
 
 section {
-  /* display: none !important; */
   flex: 1;
 }
 
@@ -79,6 +79,8 @@ nav a:hover {
   background-color: #5a5a5a8c;
 }
 
+
+/* Animated images */
 .container {
   box-sizing: border-box;
   display: flex;
@@ -252,10 +254,10 @@ footer {
   background-color: #1b1b20;
   padding: 40px 0;
   color: #e6e6e6;
-  height: 250px; 
+  height: 250px;
   font-family: Montserrat, sans-serif;
 }
- 
+
 .footer-content {
   text-align: center;
   max-width: 500px;
@@ -278,19 +280,19 @@ footer {
   font-size: 16px;
   gap: 20px;
   height: 20px;
-} 
+}
 
 .footer-links > .footer-list-lines {
- margin: 0;
- padding: 0;
- display: flex;
- align-items: center;
- justify-content: center;
-
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-links > .footer-list-lines > .footer-anchors {
-  padding: 0;margin: 0;
+  padding: 0;
+  margin: 0;
   color: #e6e6e6;
   text-decoration: none;
   transform: color 0.3s;
@@ -304,7 +306,7 @@ footer {
   color: #2b6289;
   text-decoration: none;
   transform: color 0.3s;
-} 
+}
 
 .footer-social {
   margin: 0 0 20px;
@@ -320,11 +322,9 @@ footer {
 
 .footer-social a:hover {
   color: #2b6289;
-} 
-
+}
 
 /* Tours --------------------------- */
-
 #main-tours-container {
   margin-top: 80px;
   margin-bottom: 50px;
@@ -397,7 +397,6 @@ figcaption {
 }
 
 /* Contact-------------------------- */
-
 .form-section {
   margin-top: 100px;
   margin-bottom: 100px;
