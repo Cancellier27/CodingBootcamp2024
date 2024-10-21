@@ -4,12 +4,13 @@ let animationFrame
 
 const directions = {up: false, down: false, right:false, left: false}
 
-const player = new Player({
+const player1 = new Player({
   x: 245,
-  y: 145,
+  y: 150,
   sizeX: 10,
   sizeY: 10,
-  ctx: ctx
+  ctx: ctx,
+  color: "red"
 })
 
 const enemy1 = new Enemy({
@@ -17,10 +18,12 @@ const enemy1 = new Enemy({
   y: 150,
   sizeX: 10,
   sizeY: 10,
-  ctx: ctx
+  ctx: ctx,
+  color: "blue"
+
 })
 
-const coll = new Collision({objects: [Player, Enemy]})
+const coll = new Collision({objects: [player1, enemy1]})
 
 document.addEventListener("keydown", (e) => {
   if(e.key === "ArrowRight") directions.right = true
@@ -50,7 +53,7 @@ function start() {
 
     while (delta >= step) {
       ctx.clearRect(0,0,500,300)
-      players()
+      loop()
       delta -= step;
     }
 
@@ -63,9 +66,10 @@ function start() {
   animationFrame = requestAnimationFrame(tick);
 }
 
-function players() {
-  player.walk();
+function loop() {
+  player1.walk();
   enemy1.draw()
+  coll.collisionCheck()
 }
 
 start()

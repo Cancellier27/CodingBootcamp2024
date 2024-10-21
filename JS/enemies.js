@@ -1,12 +1,12 @@
 class Enemy {
-  constructor({x, y, sizeX, sizeY, ctx}) {
+  constructor({x, y, sizeX, sizeY, ctx, color}) {
     this.x = x
     this.y = y
-    this.sizeX = 10 || sizeX
-    this.sizeY = 10 || sizeY
+    this.sizeX = sizeX || 10
+    this.sizeY = sizeY || 10
     this.ctx = ctx
     this.isMoving = false
-
+    this.color = color || "orange"
     this.init()
   }
 
@@ -33,14 +33,12 @@ class Enemy {
     this.draw()
   }
 
-  move(x, y) {
-    this.x = x
-    this.y = y
-    this.draw()
+  getPosition() {
+    return [this.x, this.y]
   }
 
   draw() {
-    this.ctx.fillStyle = "black"
+    this.ctx.fillStyle = this.color
     this.ctx.fillRect(this.x, this.y, this.sizeX, this.sizeY)
   }
 
