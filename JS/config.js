@@ -14,16 +14,26 @@ const player1 = new Player({
 })
 
 const enemy1 = new Enemy({
-  x: 200,
-  y: 150,
+  x: 489,
+  y: 100,
   sizeX: 10,
   sizeY: 10,
   ctx: ctx,
-  color: "blue"
-
+  color: "blue",
+  speed: 1.5
 })
 
-const coll = new Collision({objects: [player1, enemy1]})
+const enemy2 = new Enemy({
+  x: 250,
+  y: 1,
+  sizeX: 10,
+  sizeY: 10,
+  ctx: ctx,
+  color: "yellow",
+  speed: 2
+})
+
+const coll = new Collision({player: player1, enemies: [enemy1, enemy2], })
 
 document.addEventListener("keydown", (e) => {
   if(e.key === "ArrowRight") directions.right = true
@@ -68,7 +78,8 @@ function start() {
 
 function loop() {
   player1.walk();
-  enemy1.draw()
+  enemy1.autoMove("left")
+  enemy2.autoMove("down")
   coll.collisionCheck()
 }
 

@@ -1,7 +1,9 @@
 class Enemy {
-  constructor({x, y, sizeX, sizeY, ctx, color}) {
+  constructor({x, y, sizeX, sizeY, ctx, color, speed}) {
     this.x = x
     this.y = y
+    this.speed = speed || 1
+    this.initialPos = {x: x, y: y}
     this.sizeX = sizeX || 10
     this.sizeY = sizeY || 10
     this.ctx = ctx
@@ -10,24 +12,26 @@ class Enemy {
     this.init()
   }
 
-  autoMove() {
-    let n = Math.random()
+  autoMove(direction) {
 
-    if (n <= 0.25 && this.x < 490) {
-      this.x++
+    if (this.x >= 490 || this.x <= 0 || this.y <= 0 || this.y >= 290) {
+      this.x = this.initialPos.x
+      this.y = this.initialPos.y
+      this.draw()
+      return
     }
-    if (n > 0.25 || n <= 0.5) {
-      if (this.x > 0) {
-        this.x--
-      }
+
+    if (direction === "right") {
+      this.x = this.x + this.speed
     }
-    if (n > 0.5 || n <= 0.75) {
-      if (this.y > 0) {
-        this.y--
-      }
+    if (direction === "left") {
+      this.x = this.x - this.speed
     }
-    if (n > 0.75 && this.y < 290) {
-      this.y++
+    if (direction === "up") {
+      this.y = this.y - this.speed
+    }
+    if (direction === "down") {
+      this.y = this.y + this.speed
     }
 
     this.draw()
