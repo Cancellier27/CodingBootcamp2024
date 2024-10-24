@@ -27,7 +27,6 @@
         position: relative;
         width: auto;
         height: auto;
-        /* border: blue solid 3px; */
         transform: scale(2);
         z-index: 100;
       }
@@ -52,19 +51,38 @@
         font-size: 25px;
       }
 
+      button {
+        width: 100px;
+        height: 30px;
+        position: absolute;
+        top: 85px;
+        left: 105px;
+      }
+
+      .end-button {
+        display: none;
+      }
+
+      @media screen and (width <= 450px) {
+        .game-tags {
+          transform: scale(3);
+        }
+      }
     </style>
   </head>
   <body>
     <div class="game-container">
       <div class="game-tags">
-        <canvas id="canvas" width="500" height="300" ></canvas>
+        <canvas id="canvas" width="300" height="200"></canvas>
         <div class="score-container"><p class="score-text">0</p></div>
+        <button class="start-button" onclick="startGame()">Start Game!</button>
+        <button class="end-button" onclick="restart()">GAME OVER!</button>
       </div>
     </div>
 
-    <script src="player.js" ></script>
-    <script src="enemies.js" ></script>
-    <script src="collisions.js" ></script>
-    <script src="config.js" ></script>
+    <script src="player.js"></script>
+    <script src="enemies.js"></script>
+    <script src="collisions.js"></script>
+    <script src="config.js"></script>
   </body>
 </html>

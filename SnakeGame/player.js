@@ -1,5 +1,5 @@
 class Player {
-  constructor({x, y, sizeX, sizeY, ctx, color, speed, size}) {
+  constructor({x, y, sizeX, sizeY, ctx, color, speed}) {
     this.x = x
     this.y = y
     this.sizeX = sizeX || 10
@@ -7,19 +7,26 @@ class Player {
     this.ctx = ctx
     this.color = color || "orange"
     this.speed = speed || 1
-    this.size = size
+    this.size = 1
     this.xyPrevLocation = []
-    this.lastDirection = null
-    this.init()
+    this.lastDirection = "right"
+    this.posBehind = 10
+    this.isRunning = false
   }
 
   walk() {
-    if (directions.length === 0) {
+    if(!this.isRunning) {
       this.draw()
       return
     }
 
-    let dir = directions[directions.length - 1]
+    let dir
+
+    if (directions.length === 0 && this.lastDirection != null) {
+      dir = this.lastDirection
+    } else {
+      dir = directions[directions.length - 1]
+    }
 
     if (
       (dir === "right" && this.lastDirection === "left") ||
@@ -28,13 +35,12 @@ class Player {
       (dir === "down" && this.lastDirection === "up")
     ) {
       // Not allow go to walk behind
-      this.draw()
-      return
+      dir = this.lastDirection
     }
 
     if (dir === "right") {
       this.lastDirection = "right"
-      if (this.x >= 499) {
+      if (this.x >= canvasX) {
         this.x = -9
       } else {
         this.x = this.x + this.speed
@@ -43,7 +49,7 @@ class Player {
     if (dir === "left") {
       this.lastDirection = "left"
       if (this.x <= -9) {
-        this.x = 499
+        this.x = canvasX
       } else {
         this.x = this.x - this.speed
       }
@@ -51,14 +57,14 @@ class Player {
     if (dir === "up") {
       this.lastDirection = "up"
       if (this.y <= -9) {
-        this.y = 299
+        this.y = canvasY
       } else {
         this.y = this.y - this.speed
       }
     }
     if (dir === "down") {
       this.lastDirection = "down"
-      if (this.y >= 299) {
+      if (this.y >= canvasY) {
         this.y = -9
       } else {
         this.y = this.y + this.speed
@@ -83,19 +89,15 @@ class Player {
     if (this.size > 1) {
       this.ctx.fillStyle = "orange"
       for (let i = 1; i < this.size; i++) {
-        // 120,230
         this.ctx.fillRect(
-          Number(this.xyPrevLocation[i * 10].split(",")[0]),
-          Number(this.xyPrevLocation[i * 10].split(",")[1]),
+          Number(this.xyPrevLocation[i * this.posBehind].split(",")[0]),
+          Number(this.xyPrevLocation[i * this.posBehind].split(",")[1]),
           this.sizeX,
           this.sizeY
         )
-        
       }
     }
   }
 
-  init() {
-    this.draw()
-  }
+
 }

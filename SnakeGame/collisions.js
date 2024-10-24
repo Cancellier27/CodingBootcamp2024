@@ -25,16 +25,12 @@ class Collision {
   }
 
   itselfCollision() {
-    let posCheck = this.player.xyPrevLocation.slice(10, this.player.size * 6)
+    let posCheck = this.player.xyPrevLocation.slice(10, this.player.size * this.player.posBehind)
     let plaPorString = `${this.player.x},${this.player.y}`
-    
-
-     
+         
     if(posCheck.includes(plaPorString)) {
-      console.log(posCheck.length)
-      console.log(this.player.xyPrevLocation.length)
-      // colliding itself
-      alert("GameOver!")
+      this.player.isRunning = false
+      document.querySelector(".end-button").style.display = "block"
     }
   }
 

@@ -8,7 +8,7 @@ class Enemy {
     this.color = color || "orange"
     this.isDestroyed = false
     this.repositioning = false
-    this.init()
+    this.isRunning = true
   }
 
   getPosition() {
@@ -28,16 +28,12 @@ class Enemy {
 
   replacing() {
     setTimeout( () => {
-      this.x = Math.random() * 490 + 1
-      this.y = Math.random() * 290 + 1
+      this.x = Math.random() * (canvasX - 20)
+      this.y = Math.random() * (canvasY - 20)
       this.isDestroyed = false
       this.repositioning = false
     } ,4000)
   }
 
 
-
-  init() {
-    this.draw()
-  }
 }
