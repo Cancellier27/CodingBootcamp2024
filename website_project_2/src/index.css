@@ -1,0 +1,45 @@
+:root {
+  --teko-font: "Teko", sans-serif;
+  --dark-background-color: #000814;
+  --light-dark-background-color: #2b2d42;
+  --heading-color: #d90429;
+  --text-color: #edf2f4;
+  --text-hover-color: #8d99ae;
+  --light-red: #ef233c;
+
+  --text-font-size: 18px
+}
+
+/* apply to all items */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  width: inherit;
+  min-height: inherit;
+}
+
+
