@@ -7,7 +7,7 @@
   --text-hover-color: #8d99ae;
   --light-red: #ef233c;
 
-  --text-font-size: 18px
+  --text-font-size: 18px;
 }
 
 /* apply to all items */
@@ -41,5 +41,3 @@ code {
   width: inherit;
   min-height: inherit;
 }
-
-

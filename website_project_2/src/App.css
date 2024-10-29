@@ -12,8 +12,26 @@
 }
 
 section {
-  width: 100%;
+  width: var(100% - 250px);
   height: 100vh;
-  border: 5px solid blue;
+  /* border: 5px solid blue; */
+  margin-left: 250px;
 }
 
+/* Home section ------------------- */
+#home  {
+  background: linear-gradient(90deg, rgba(43,45,66,1) 0%, rgba(0,0,0,1) 100%);
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+}
+
+#home h1 {
+  font-family: var(--teko-font);
+  color: var(--heading-color);
+  font-size: 200px;
+}
+
+#home h4 {
+  color: var(--text-color);
+}
