@@ -20,18 +20,49 @@ section {
 
 /* Home section ------------------- */
 #home  {
-  background: linear-gradient(90deg, rgba(43,45,66,1) 0%, rgba(0,0,0,1) 100%);
   display: flex;
   flex-direction: column;
-  padding-left: 100px;
+  padding-left: 150px;
+  padding-top: 200px;
+  background-image: url("./images/background.jpg");
+  background-size: cover;
 }
 
 #home h1 {
   font-family: var(--teko-font);
   color: var(--heading-color);
-  font-size: 200px;
+  font-size: 150px;
+  width: 600px;
+  line-height: 150px;
 }
 
 #home h4 {
   color: var(--text-color);
+}
+
+/* About section ----------------------- */
+
+#about {
+  background-color: rgb(5, 5, 37);
+  padding: 80px 150px;
+}
+
+.about-title {
+  color: var(--heading-color);
+  font-family: var(--teko-font);
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-text {
+  color: var(--text-color);
+  font-size: var(--text-font-size);
+}
+
+.about-image {
+  float: right;
+  max-width: 500px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
