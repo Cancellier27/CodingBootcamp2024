@@ -66,3 +66,36 @@ section {
   margin-left: 20px;
   margin-bottom: 20px;
 }
+
+/* projects  ---------- */
+
+#projects {
+  background-color: rgb(5, 5, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark {
+  color: #000;
+}
+
+.carousel-container {
+  position: relative;
+  width: 70%;
+}
+
+.bottom-white-strip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120px;
+  background-color: rgb(105, 105, 105);
+  opacity: 60%;
+  z-index: 10;  
+}
+
+.front {
+  z-index: 1000;
+}
