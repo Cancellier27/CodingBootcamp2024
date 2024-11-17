@@ -1,5 +1,6 @@
 /* Nav section --------------------- */
 .nav-section {
+  z-index: 20;
   width: 250px;
   height: 100vh;
   background: var(--dark-background-color);
@@ -40,12 +41,17 @@
   border-radius: 50%;
 }
 
-.nav-section ul {
+.standard-link-container {
+  display: block;
   list-style: none;
 }
 
 .nav-section li {
   margin: 20px 0px;
+}
+
+.hamburger {
+  display: none;
 }
 
 .standard-link {
@@ -61,4 +67,34 @@
 .standard-link:active {
   color: var(--text-hover-color);
   border-bottom: 1px solid var(--light-red);
+}
+
+
+/* Medias ---------------------------*/
+@media screen and (max-width: 1180px) {
+  .standard-link-container {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .hamburger {
+    display: block;
+  }
+
+  .standard-link-container,
+  .photo-icons-section {
+    display: none;
+  }
+
+ .nav-section {
+    width: 50px;
+    transition: 0.3s;
+  }
+
+  .click-nav-section {
+    width: 160px;
+    opacity: 80%;
+    transition: 0.3s;
+  }
 }

@@ -20,55 +20,42 @@ export default function MainSection() {
       </section>
 
       <section id="about">
-        <h1 className="about-title">ABOUT</h1>
+        <h1 className="about-title">ABOUT ME</h1>
         <p className="about-text">
           <img
             className="about-image"
             src={jsImage}
             alt="js coding general images, with if and else"
           ></img>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur.
+          Born and raised in Urussanga, Santa Catarina, Brazil, I have over 7
+          years of experience as a civil engineer, specializing in construction.
+          Throughout my career, I honed soft skills like teamwork, leadership,
+          and problem-solving, and faced significant challenges, such as
+          adapting to work abroad with different languages and standards.
           <br></br>
           <br></br>
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. <br></br>
+          In 2019, I pivoted toward coding, fueled by my passion for technology,
+          games, and programming. Starting with Python and transitioning to web
+          development with JavaScript, I fell in love with creating interactive
+          web experiences using JS, HTML, and CSS. I pursued self-learning
+          through platforms like Udemy, RocketSeat, and coding challenges on
+          Codewars and HackerRank. <br></br>
           <br></br>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          In 2022, I began a Master's in Computer Science in London but had to
+          pause due to financial constraints. Despite this, I continued studying
+          independently. In 2023, I became a father, which delayed my career
+          shift to prioritize family needs.
+          <br></br>
+          <br></br>
+          In 2024, I reignited my tech aspirations by completing a Full-Stack
+          Web Development Bootcamp at HyperionDev. I deepened my knowledge in
+          React, MongoDB, SQL, Bootstrap, and other technologies, renewing my
+          motivation to secure a role in the tech industry.
         </p>
       </section>
 
       <section id="projects">
-        <h1 className="projects-title">title</h1>
+        <h1 className="projects-title"> PROJECTS I HAVE DEVELOPED</h1>
         <div className="cards-container">
           <Card className="card">
             <Card.Img variant="top" src={website} />
