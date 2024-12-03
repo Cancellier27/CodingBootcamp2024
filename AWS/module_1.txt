@@ -1,0 +1,74 @@
+History of AWS: ---------------------------------------------
+  2002 - launched internally i Amazon
+  2003 - One the core ideas of Amazon for the market.
+  2004 - Launches public with SQS
+  2006 - Re-launched public with SQS, S3 and EC2
+  2007 - Launched in Europe
+    Dropbox, Netflix, Airbnb and NASA use AWS
+
+
+Why do we need cloud computing?: ---------------------------------------------
+
+  IP = internet protocol, unique number that identifies the device in the internet
+  Network = Cables, routers and servers connected with each other
+  Router = network device that forwards data packets between computer networks
+  Switch = tales a packet and send it to the correct server / client on your network
+  
+  datacenter = is a room or building dedicated to house computer systems and associated components.
+    Drawback of datacenter:
+      Pay for the rent of the building  
+      Pay for the power supply, cooling, maintenance
+      Add the replace hardware every now and then
+      Scaling is limited
+
+
+What is cloud computing?: ---------------------------------------------
+
+  is a on-demand delivery of computer power, database,storage, applications and other IT resources
+  if pay as you go
+  simple access to server
+  AWS owns and maintain the network-connected hardware for these application to run, while you can just use it online.
+  It basically takes away all the hardware issues from whoever wants to use the storage and they just use the web application.
+  Netflix and Dropbox use AWS
+
+How to use Cloud computing: ---------------------------------------------
+  How to deploy:
+    Private cloud (not included in AWS) - Cloud services used by a single organization, not exposed to public
+                  - complete control
+                  - Secure to sensitive applications  
+                  - Private hardware separated for your applications
+
+      Public Cloud - Cloud services used and operated by third parties providers.
+      
+      Hybrid Cloud - keep some servers on premises and extend some capabilities on the cloud. Such as, computing on my own server and storage on AWS
+                   - Can keep the sensitive data into your own database, and the rest to the public cloud.
+
+Problems solved with Cloud: ---------------------------------------------
+  Flexibility
+  Cost effectiveness, pay as you go
+  Scalability, to increase yor storage easily
+  Elasticity, to scale up or down whenever needed.
+  High-availability
+  Agility
+
+Types of Cloud computing: ---------------------------------------------
+  Infrastructure as a Service (IaaS)
+    Provide building blocks for cloudIT
+    Provides networking, computers, data storage space
+    Highest level of Flexibility
+    Easy parallel with traditional on-premises IT
+  
+  Platform as a Service (PaaS)
+    Remove the need for your org to manage the underlying Infrastructure
+    Focus on the deployment and management of your applications
+ 
+  Software as a Service (SaaS)
+    Completed product that is run and managed by the service provider
+
+Pricing of the cloud: ---------------------------------------------
+  Compute:
+    Pay for the processing power consumed
+  storage:
+    Pay for the data stored
+  Data transfer OUT of the cloud
+    data transfer out, not in
