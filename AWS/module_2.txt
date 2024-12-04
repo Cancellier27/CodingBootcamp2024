@@ -1,0 +1,59 @@
+IAM - Identity and Access Management, Global Service
+  Part of AWS that defines the access for each member that will be working on the database. 
+
+  Root account - created by default, and it should not be shared. It has full access.
+  Users - People within organization and can be grouped together 
+        - Users don't need to belong to any group, or can be part of one group or many groups.
+  Groups - Contain only users and not other Groups
+  Permissions - Polices assigned to JSON documents
+              - Define the permissions of the users
+              - In AWS you should give to each user the least privileges possible. Not more than needed
+{
+  "Version": "2012-10-17",
+  "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": "ec2:Describe",
+                  "Resource": "*"
+                }
+              ]            
+}
+
+How to add new users: ------------------------------
+  1. Go to IAM (Identity and Access Management)
+  2. Select the "Users" on the left panel
+  3. Click on "Create user" on the top left corner
+  4. Create an username
+  5. if it is a programmer and need access to terminal and coding, select the "AWS Management Console" and create and "IAM user"
+  6. specify the password or not
+  7. re-create the password on login, or not.
+  8. "Next"
+  9. Create a group and add policies pre-made or create your own. And if needed add the user to the groups.
+  10. Review and create the user.
+
+How to secure your database: -------------------------------
+  Strong password = higher security for your account
+    In AWS you can setup a password policy
+      lower case
+      Upper case
+      special character
+    Allow IAM users to change their  password
+    password change every certain time
+    prevent password re-use
+
+
+  Multi factor authentication (MFA): 
+    User have access to your acc and can possibly change config or delete
+    MFA = Password you know + security device you own
+
+    MFA can be virtual devices, like google app authentication. Or can be a hardware device that generates keys
+
+
+How can user access AWS: ---------------------------------------------------------------
+  To access AWS there are 3 options:
+    AWS management Console
+    AWS command Line interface
+    AWS Software Developer Kit
+  Access keys are generated through the AWS console
+  
+
