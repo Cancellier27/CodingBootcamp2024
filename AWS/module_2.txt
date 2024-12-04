@@ -55,5 +55,29 @@ How can user access AWS: -------------------------------------------------------
     AWS command Line interface
     AWS Software Developer Kit
   Access keys are generated through the AWS console
+
+
+IAM roles: ------------------------------------------------
+  Some AWS services will nee to perform actions on your behalf
+  To do so, we will assign permissions to AWS services with IAM roles
+    IAM roles is basically a virtual Machine (VM)
+
+IAM security tools: ---------------------------------------
+  IAM Credentials Report (account-level)
+    A report that lists all your acc
   
+  IAM access advisor (user-level)
+    can see for  example the last time a user used a service.
+    you can use this info to review your policies and access lists
+
+IAM guidelines & best practices
+  Do not use the root acc except AWC acc setup
+  never share your acc
+  Create a strong password
+  use and enforce a MFA
+  Create and use roles for giving permission to AWS
+  Use access keys for programming access
+  Audit permissions of your acc with the IAM Credentials Report
+  Never share IAM users & access keys
+
 
