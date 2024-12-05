@@ -12,7 +12,7 @@ Why do we need cloud computing?: ---------------------------------------------
   IP = internet protocol, unique number that identifies the device in the internet
   Network = Cables, routers and servers connected with each other
   Router = network device that forwards data packets between computer networks
-  Switch = tales a packet and send it to the correct server / client on your network
+  Switch = takes a packet and send it to the correct server / client on your network
   
   datacenter = is a room or building dedicated to house computer systems and associated components.
     composed of three parts:

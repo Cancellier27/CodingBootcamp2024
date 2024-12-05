@@ -77,7 +77,7 @@ IAM guidelines & best practices
   use and enforce a MFA
   Create and use roles for giving permission to AWS
   Use access keys for programming access
-  Audit permissions of your acc with the IAM Credentials Report
+  Audit permissions of your acc with the IAM Credentials Report or IAM AccessAdvisor
   Never share IAM users & access keys
 
 

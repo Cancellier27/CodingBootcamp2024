@@ -1,0 +1,21 @@
+EC2
+  EC2 is one of the most popupar AWS' offering
+  ECS = Elastic Compute Cloud = IaaS
+  EC2 integrations:
+    Renting virtual machine (EC2)
+    Storing data on virtual drivers (EBS)
+    Distributing load across machines (ELB)
+    Scaling the services using an auto scaling group (ASG)
+
+  **Knowing the EC2 is fundamental to know how the cloud works
+
+ECS configurations options:
+  Operation system, Windows or Linux (no mac at the time.)
+  how much compute power (cores)
+  How much random-access memory (RAM)
+  how much storage  
+    Network attached (EBS & EFS)
+    hardware (EC2 Instance Store)
+  Network card: speed of the card, Public IP address
+  Firewall rules: security group
+  Bootstrap script (configure at first launch): EC2 User Data
