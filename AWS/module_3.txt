@@ -9,7 +9,7 @@ EC2
 
   **Knowing the EC2 is fundamental to know how the cloud works
 
-ECS configurations options:
+EC2 configurations options:
   Operation system, Windows or Linux (no mac at the time.)
   how much compute power (cores)
   How much random-access memory (RAM)
@@ -19,3 +19,119 @@ ECS configurations options:
   Network card: speed of the card, Public IP address
   Firewall rules: security group
   Bootstrap script (configure at first launch): EC2 User Data
+
+EC2 - Instance creation ------------------------------------
+  Create an instance of a virtual machine to host your apps, such as an web-app.
+  go to EC2 service and select the "Instance" on the left panel, then click on the "Launch Instances" on the top right side.
+  Then follow the steps on the page to create the instance. For free service use the "Free tier" options.
+
+  Security Groups: =======================================
+    If configures the rules for access to the EC2 instances.
+    Security groups just have allow rules
+    Security groups can reference by IP or by sectary group
+
+    There is inbound traffic in the EC2 and outbound traffic.
+    EC2 pre configures the outbound to allow any, so EC2 can access everything, but has no pre-set config for inbound
+    so we need to decide what can access the EC2 instance. Such as Http, Https...
+
+    Inbound
+    ---------->    |             |
+    Outbound       |EC2 Instance |
+    <----------    |             |
+
+    Security Groups act like a Firewall
+    They allow: 
+      Access to Ports
+      Authorized IP ranges - IPv4 and IPv6
+      Control of inbound and outbound
+
+      Por for the trainings:
+        22 - SSH (security shell linux)
+        21 - FTP (file transfer protocol)
+        22 - SFTP (Secure file transport protocol)
+        80 - Http
+        443 - HTTPS
+        3389 - RDP (Remote Desktop Protocol)
+
+    SSH security protocol, allows our Ec2 to be accessible by cmd
+      it can be accessed through Putty (software that can be used to control Ec2), cmd and Ec2 instance connect
+
+    To access SSH through cmd use the below command
+      ssh -i AWS/EC2Tutorial.pem ec2-user@3.10.210.193
+      If it does not work, the file .pem might need to have its access changed in windows
+
+    EC2 instance connect 
+      Connect to your EC2 instance within your browser
+      no need to use the .pem file  
+      
+      Go to your EC2 instances, select the instance you want to edit, make sure the security group have ssh enabled. Click on the top rich
+      corner button saying "connect" and select the tab EC2 Instance connect. It should open an cmd online with a temporary access key.
+      
+
+EC2 Instance Roles ---------------------------------------
+  Never add your personal keys into the EC2 instances. 
+  Because there might be more people connected and they can have your credentials and accesses
+  Instead you can add policies created in the IAM service and this will configure your access 
+   To do this, right click on the instance, or "Actions" button, "Security" and "Modify IAM role" 
+   and there you can add you IAM role group with the policies you set up
+
+EC2 Launch Types -----------------------------------------
+  ON-demand: (staying in the hotel whenever like and pay full price)
+    short workload, predictable pricing
+    Pay for what you use 
+      Linux - billing per minute after first minute 
+      other OS pay per hour
+    Has the highest cost but no upfront payment
+    No long-term commitment (terminate the EC2, stops paying)
+    (Recommended for short term and un-interrupted workload where you cannot predict how the application will behave)
+
+  Reserved (min 1 year): (Plan ahead to book the rooms at the hotel and can get a good discount)
+    Normal: 72% discount compared to On-demand  
+      reservation-Period: 1 year or 3 years, the more years reserved, the more discount
+      payment: No upfront payment, Partial and full payment. More discount to quicker payment.
+      Reserved and specific instance Types, cannot change
+      (Recommended for steady-state, usage)
+    Convertible:
+      Can change the EC2 instance type
+      up to 45% discount
+    Schedule:
+      Launch within the window you reserve
+      commitment of 1 year  
+      (Recommended for whe you need extra computing, so you can Schedule to escalate your compute power.)
+
+  Spot instances: (Guests bid for the free room, but can be kicked out at any time)
+    Can get a discount of max 90% compared to on-demand
+    might loose the instance if your price is goes up the stop price. In case you need more processing, so your price will go up
+    therefore you can loose your instance when it reaches the max set up price set by you and someone else can take it over.
+    (Recommended for jobs that are resilient to failure, image processing, distributed works, batch jobs,)
+    (not suitable for critical jobs)
+
+  EC2 Dedicated Server: (book the entire hotel building for yourself)
+    host a physical server of EC2 instances fully dedicated to you. 
+    You have access to the hardware
+    3 Years reservation period.
+    More expensive.
+    Useful for software that have complicated licensing model
+
+  EC2 Dedicated Instances: (book the entire hotel building for yourself)
+    Host of EC2 instances fully dedicated to you. 
+    You DO NOT have access to the hardware
+    3 Years reservation period.
+    More expensive.
+    Useful for software that have complicated licensing model
+  
+Shared responsibility model for EC2 ---------------------
+  AWS will:
+    Infrastructure
+    isolation on physical hosts
+    replacing failure hardware
+    compliance validation
+  
+  You will:
+    Security groups
+    OS and patches updates
+    software installed in the EC2 instances 
+    IAM roles assigned to the EC2 and IAM used access management
+    Data security of your EC2 (encryption, password, etc...)
+
+    
