@@ -10,7 +10,7 @@ EC2
   **Knowing the EC2 is fundamental to know how the cloud works
 
 EC2 configurations options:
-  Operation system, Windows or Linux (no mac at the time.)
+  Operation system, Windows or Linux (no mac at the time of the course.)
   how much compute power (cores)
   How much random-access memory (RAM)
   how much storage  
@@ -45,7 +45,7 @@ EC2 - Instance creation ------------------------------------
       Authorized IP ranges - IPv4 and IPv6
       Control of inbound and outbound
 
-      Por for the trainings:
+      Port for the trainings:
         22 - SSH (security shell linux)
         21 - FTP (file transfer protocol)
         22 - SFTP (Secure file transport protocol)

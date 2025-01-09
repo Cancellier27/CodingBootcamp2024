@@ -1,0 +1,18 @@
+ECS instance storage:
+
+EBS - Elastic Block Storage, is a network drive ta you can attach your instances while they run.
+    1.They are not within the EC2 instance, so they are not deleted is the instance ir removed.
+    2.They can be only mounted to one instance at a time
+        2.1.Can be detached from one EC2 instance and attached onto another one.
+    3.They are boud to a specific availability zone. ( have to be on the samegeographic zone)
+    4. Can be thik as an USB stick
+    5.Free tier has 30gb storage.
+
+EBS volum, is a network drive (not physical)
+
+To create a new EBS ---------------
+    Go to the EC2 dashboard
+        1. search for the EBS -Elastic Block Storage on the left tab    
+        2. create a new EBS and set it to the same AZ (availability zone of your instance)
+        3. when created,righ click o it, or select it an click on the Actions button    
+        4. Select the attach volume and select the instance you desire.

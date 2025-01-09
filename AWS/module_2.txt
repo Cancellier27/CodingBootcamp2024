@@ -58,7 +58,7 @@ How can user access AWS: -------------------------------------------------------
 
 
 IAM roles: ------------------------------------------------
-  Some AWS services will nee to perform actions on your behalf
+  Some AWS services will need to perform actions on your behalf
   To do so, we will assign permissions to AWS services with IAM roles
     IAM roles is basically a virtual Machine (VM)
 
