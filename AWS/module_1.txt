@@ -1,5 +1,5 @@
-History of AWS: ---------------------------------------------
-  2002 - launched internally i Amazon
+History of AWS (Amazon Web Service): ---------------------------------------------
+  2002 - launched internally in Amazon
   2003 - One the core ideas of Amazon for the market.
   2004 - Launches public with SQS
   2006 - Re-launched public with SQS, S3 and EC2
