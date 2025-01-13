@@ -16,3 +16,21 @@ To create a new EBS ---------------
         2. create a new EBS and set it to the same AZ (availability zone of your instance)
         3. when created,righ click o it, or select it an click on the Actions button    
         4. Select the attach volume and select the instance you desire.
+
+
+EBS Snapshots------------------------------
+    It basically makes a backup of your EBS volume at a point in time
+        Is a copy of the EBS volume where it can restore deleted data if needed, or it can be copied to
+        a diferent AZ or region.
+    Not necessary to detach volume to do snapshot, but recommended
+
+    Create a snapshot -------------------------
+        To create a snapshot, go to the EC2 panel and select the volume on the EBS options on the left column
+        Right click on it or select and actions and create snapshot.
+        It will prcess it and it will be saved under the EBS section, Snapshots.
+        With that you can copy it to a new AZ. Or create a new volume changing the region.
+
+AMI Amazon Machine Image --------------------------------
+    Create a "template" of your EC2 instance with all its components. It then can be easily copied to a new
+    AZ or region with all your pre-configurations that were done on the EC2.
+    When the AMI is built it automatically creates Snapshots of all the EBS volumes.
