@@ -62,3 +62,5 @@ Shared responsibility model for EC2 ---------------------
     -Setting up data encryption
     -Responsibility of any data on the drives
     -Understanding the risk of using EC2 instance store
+
+    
